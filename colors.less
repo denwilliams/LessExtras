@@ -1,0 +1,35 @@
+// to generate a color palette from a base color
+// eg: @base: #663333;
+
+// idea from http://designshack.net/articles/css/10-less-css-examples-you-should-steal-for-your-projects/
+
+
+// COMPLIMENTARY COLOR SCHEME - 2 DIFFERENT HUES
+
+.complementarycolorscheme-complimentary-color-1(@base) {
+	spin(@base, 180);
+}
+.complementarycolorscheme-complimentary-color-2(@base) {
+	darken(spin(@base, 180), 5%);
+}
+.complementarycolorscheme-lighter-color-1(@base) {
+	lighten(@base, 15%);
+}
+.complementarycolorscheme-lighter-color-2(@base) {
+	lighten(@base, 30%);
+}
+
+// COMPLIMENTARY COLOR SCHEME - SAME HUE
+
+.subtlecolorscheme-darker1-color-1(@base) {
+	darken(spin(@base, -5), 10%);
+}
+.subtlecolorscheme-darker2-color-2(@base) {
+	darken(spin(@base, -10), 20%);
+}
+.subtlecolorscheme-lighter-color-1(@base) {
+	lighten(spin(@base, 5), 10%);
+}
+.subtlecolorscheme-lighter-color-2(@base) {
+	lighten(spin(@base, 10), 20%);
+}
