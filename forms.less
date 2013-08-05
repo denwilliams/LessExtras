@@ -1,0 +1,23 @@
+@import "utils.less";
+
+// see http://css-tricks.com/snippets/css/glowing-blue-input-highlights/
+
+.glowing-blue-input-highlights() {
+	.transition(all .30s ease-in-out);
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #DDDDDD;
+	&:focus {
+		box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+		padding: 3px 0px 3px 3px;
+		margin: 5px 1px 3px 0px;
+		border: 1px solid #5ee3ff; // fallback for older browsers
+		border: 1px solid rgba(81, 203, 238, 1);		
+	}
+}
+
+// use the following to apply this effect to all text inputs
+// input[type=text], input[type=password], input[type=email], textarea {
+//	.glowing-blue-input-highlights;
+//}
